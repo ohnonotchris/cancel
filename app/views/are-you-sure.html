@@ -13,14 +13,14 @@
       <div class="govuk-grid-column-two-thirds">
           <h1 class="govuk-heading-xl">Are you sure you want to cancel?</h1>
           <p class="govuk-body">
-              You are about to cancel your appointment on <strong>{INSERT APPT DATE}</strong>.
+              You are about to cancel your appointment on <strong>	Friday 10 November between 10:30am and 11:00am</strong>.
           </p>
-          <p class="govuk-body">By cancelling this appointment an engineer will not visit the property to fix your problem</p>
+          <p class="govuk-body">By cancelling this appointment an operative will not visit the property to fix your problem</p>
           <form id="confirm-cancellation-form" action="/appt-cancelled" method="POST">
               <input type="hidden" name="csrf_token" value="IjNkNDE1NDdiZTUwYjYzODE4ZGI2ODFlYTk1OTJiNmZiNTlkN2QzYjUi.ZVt-EQ.dCkmP6RJyWOeruwvw8kOk9dMxds">
               <div class="govuk-button-group">
                   <button class="govuk-button govuk-button--warning" data-module="govuk-button">Cancel Appointment</button>
-                  <a class="govuk-link" href="http://localhost/">Go Back</a>
+                  <a class="govuk-link" href="/index">Go Back</a>
               </div>
           </form>
       </div>
