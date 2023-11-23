@@ -1,0 +1,66 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<main class="govuk-main-wrapper " id="main-content" role="main">
+                
+                
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-thirds">
+            <h1 class="govuk-heading-xl">Do you want to cancel this appointment?</h1>
+            <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">Booking reference</dt>
+                    <dd id="booking_reference" class="govuk-summary-list__value">
+                        CCABC1234567
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">Description</dt>
+                    <dd id="description" class="govuk-summary-list__value">
+                        This is a dummy description of what the resident entered.
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">Appointment</dt>
+                    <dd id="appointment_date" class="govuk-summary-list__value">
+                        Friday 10 November between 10:30am and 11:00am
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">Postcode</dt>
+                    <dd id="postcode" class="govuk-summary-list__value">
+                        E205PQ
+                    </dd>
+                </div>
+            </dl>
+            <form id="confirm-appointment-form" action="/are-you-sure" method="POST">
+                <input type="hidden" name="csrf_token" value="IjNkNDE1NDdiZTUwYjYzODE4ZGI2ODFlYTk1OTJiNmZiNTlkN2QzYjUi.ZVt9-A.14qOw5U27wG5FpDzK8v0_ByJS-4">
+                <div class="govuk-form-group">
+                    <div class="govuk-radios govuk-radios--inline">
+                        <div class="govuk-radios__item">
+                            <input name="cancel-choice" type="radio" class="govuk-radios__input " id="yes-radio" value="yes" data-aria-controls="conditional-cancel-1">
+                            <label class="govuk-label govuk-radios__label" for="yes-radio" id="yes-choice">Yes</label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input name="cancel-choice" type="radio" class="govuk-radios__input " id="no-radio" value="no" data-aria-controls="conditional-cancel-2">
+                            <label class="govuk-label govuk-radios__label" for="no-radio" id="no-choice">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button id="submit-button" aria-disabled="false" class="govuk-button " data-prevent-double-click="true" data-module="govuk-button">Continue</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+            </main>
+
+
+{% endblock %}
